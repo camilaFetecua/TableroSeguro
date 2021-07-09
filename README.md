@@ -69,7 +69,7 @@
   
   Y podemos observar que podemos ver el dibujo del otro usuario en la otra pantalla 
   
-   ![Imagen](https://github.com/camilaFetecua/TableroSeguro/blob/master/Imagenes/Prueba7.JPG)
+  ![Imagen](https://github.com/camilaFetecua/TableroSeguro/blob/master/Imagenes/Prueba7.png)
   
 
 # Tecnologias Utilizadas
