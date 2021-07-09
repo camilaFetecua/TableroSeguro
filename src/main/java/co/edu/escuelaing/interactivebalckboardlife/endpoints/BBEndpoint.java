@@ -11,12 +11,16 @@ import java.util.logging.Level;
 import java.util.Queue;
 import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.logging.Logger;
+import javax.servlet.http.HttpServletRequest;
 import javax.websocket.OnClose;
 import javax.websocket.OnError;
 import javax.websocket.OnMessage;
 import javax.websocket.OnOpen;
 import javax.websocket.Session;
 import javax.websocket.server.ServerEndpoint;
+
+import co.edu.escuelaing.interactivebalckboardlife.repository.Memoria;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Component;
 
 
@@ -24,10 +28,11 @@ import org.springframework.stereotype.Component;
 @ServerEndpoint("/bbService")
 public class BBEndpoint {
 
-
+    private HttpServletRequest request;
     private static final Logger logger = Logger.getLogger(BBEndpoint.class.getName());
     /* Queue for all open WebSocket sessions */
     static Queue<Session> queue = new ConcurrentLinkedQueue<>();
+    private Memoria memoria = Memoria.getInstance();
 
     Session ownSession = null;
 
@@ -53,15 +58,19 @@ public class BBEndpoint {
     }
 
     @OnOpen
-    public void openConnection(Session session) {
+    public void openConnection(Session session) throws IOException{
         /* Register this connection in the queue */
-        queue.add(session);
-        ownSession = session;
-        logger.log(Level.INFO, "Connection opened.");
-        try {
-            session.getBasicRemote().sendText("Connection established.");
-        } catch (IOException ex) {
-            logger.log(Level.SEVERE, null, ex);
+        if(memoria.checkTicket(request.getRemoteHost()+"password")){
+            queue.add(session);
+            ownSession = session;
+            logger.log(Level.INFO, "Connection opened.");
+            try {
+                session.getBasicRemote().sendText("Connection established.");
+            } catch (IOException ex) {
+                logger.log(Level.SEVERE, null, ex);
+            }
+        }else {
+            ownSession.close();
         }
     }
 

@@ -5,12 +5,20 @@
  */
 package co.edu.escuelaing.interactivebalckboardlife.controllers;
 
+import co.edu.escuelaing.interactivebalckboardlife.configurator.WebSecurityConfig;
+import co.edu.escuelaing.interactivebalckboardlife.repository.Memoria;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
 
 
 @RestController
 public class DrawingServiceController {
+    @Autowired
+    public HttpServletRequest request;
     
     @GetMapping("/status")
     public String status() {
@@ -18,5 +26,9 @@ public class DrawingServiceController {
                 java.time.LocalDate.now() + ", " +
                 java.time.LocalTime.now() +
                 ". " + "The server is Runnig!\"}";
+    }
+    @GetMapping("/getTicket")
+    public String getTicket() throws Exception {
+        return Memoria.getInstance().setNumerodeMemoria(request.getRemoteHost());
     }
 }
