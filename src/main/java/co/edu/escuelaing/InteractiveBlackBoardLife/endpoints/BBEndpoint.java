@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package co.edu.escuelaing.interactivebalckboardlife.endpoints;
+package co.edu.escuelaing.InteractiveBlackBoardLife.endpoints;
 
 
 import java.io.IOException;
@@ -19,8 +19,7 @@ import javax.websocket.OnOpen;
 import javax.websocket.Session;
 import javax.websocket.server.ServerEndpoint;
 
-import co.edu.escuelaing.interactivebalckboardlife.repository.Memoria;
-import org.springframework.stereotype.Component;
+import co.edu.escuelaing.InteractiveBlackBoardLife.repository.Memoria;
 import org.springframework.stereotype.Component;
 
 

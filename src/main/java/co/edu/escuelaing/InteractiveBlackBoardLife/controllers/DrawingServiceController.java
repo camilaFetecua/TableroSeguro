@@ -3,15 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package co.edu.escuelaing.interactivebalckboardlife.controllers;
+package co.edu.escuelaing.InteractiveBlackBoardLife.controllers;
 
-import co.edu.escuelaing.interactivebalckboardlife.configurator.WebSecurityConfig;
-import co.edu.escuelaing.interactivebalckboardlife.repository.Memoria;
+import co.edu.escuelaing.InteractiveBlackBoardLife.repository.Memoria;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 
 

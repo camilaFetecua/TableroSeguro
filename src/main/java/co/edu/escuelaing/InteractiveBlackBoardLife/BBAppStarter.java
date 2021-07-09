@@ -1,4 +1,4 @@
-package co.edu.escuelaing.interactivebalckboardlife;
+package co.edu.escuelaing.InteractiveBlackBoardLife;
 
 
 import java.util.Collections;

@@ -1,7 +1,6 @@
-package co.edu.escuelaing.interactivebalckboardlife.repository;
+package co.edu.escuelaing.InteractiveBlackBoardLife.repository;
 
 import java.util.List;
-import java.util.UUID;
 import java.util.concurrent.CopyOnWriteArrayList;
 public class Memoria {
     private static final Memoria instance = new Memoria();
@@ -23,9 +22,9 @@ public class Memoria {
         return NumerodeMemoria;
     }
 
-    public boolean checkTicket(String ticketNumber){
+    public boolean checkTicket(String NumerodeMemoria){
         boolean isValid = false;
-        if (memorialist.contains(ticketNumber)) {
+        if (memorialist.contains(NumerodeMemoria)) {
             isValid = true;
         }
         return isValid;
