@@ -13,6 +13,9 @@ import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 
 @Configuration
 @EnableWebSecurity
+/**
+ * Clase en la que se implementa la seguridad de las paginas y definimos los usuarios
+ */
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {

@@ -12,6 +12,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
 
+/**
+ * Clase que utilizamos controlamos el tablero , llamaos el puerto y el ticket
+ */
 
 @RestController
 public class DrawingServiceController {

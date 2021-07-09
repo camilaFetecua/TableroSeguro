@@ -6,6 +6,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
+/**
+ * Es la clase que principal donde se corre la aplicacion y todas las demas dependencias.
+ */
 public class BBAppStarter {
     public static void main(String[] args){
         SpringApplication app = new SpringApplication(BBAppStarter.class);

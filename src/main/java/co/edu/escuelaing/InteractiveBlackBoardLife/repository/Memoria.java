@@ -2,6 +2,10 @@ package co.edu.escuelaing.InteractiveBlackBoardLife.repository;
 
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
+
+/**
+ * Clase donde implementamos la memoria para el ticket y el numero de la memoria
+ */
 public class Memoria {
     private static final Memoria instance = new Memoria();
     private final List<String> memorialist;

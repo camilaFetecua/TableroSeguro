@@ -22,7 +22,9 @@ import javax.websocket.server.ServerEndpoint;
 import co.edu.escuelaing.InteractiveBlackBoardLife.repository.Memoria;
 import org.springframework.stereotype.Component;
 
-
+/**
+ * Clase encargada de recibir los mensajes y enviarlos para que sean dibujados.
+ */
 @Component
 @ServerEndpoint("/bbService")
 public class BBEndpoint {
