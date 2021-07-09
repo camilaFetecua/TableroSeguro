@@ -4,9 +4,9 @@
 
   El objetivo de este taller es que partiendo de la aplicación web del tablero interactivo debe construir una aplicación web segura y que sea segura a a nivel de websockets.
 
-    a. Para asegurar la parte web debe usar autenticación basada en passwords y conexiones seguras sobre https.
+   a. Para asegurar la parte web debe usar autenticación basada en passwords y conexiones seguras sobre https.
 
-    b. Implemente un protocolo de seguridad para websockets.
+   b. Implemente un protocolo de seguridad para websockets.
 
 # Prerrequisitos 
   + Git version 2.25.1
@@ -29,30 +29,51 @@
   
   Para ejecutar el proyecto debemos ejecutar el siguiente comando 
    
-     mvn package
+      mvn package
     
    Despues de ejecutar el anterior comando se debe ejecutar el siguiente comando para ejecutar el programa 
-    
-    java -cp "target/classes;target/dependency/*" co.edu.escuelaing.interactivebalckboardlife.BBAppStarter
+   
+     java -cp "target/classes;target/dependency/*" co.edu.escuelaing.InteractiveBlackBoardLife.BBAppStarter
     
          
 # Diagrama de clases  
 
-![Imagen]()
+![Imagen](https://github.com/camilaFetecua/TableroSeguro/blob/master/Imagenes/Diagrama%20de%20clases.JPG)
 
   Para este proyecto utilizamos:
-  + **React.Component:** Para dubujar el tablero.
-  + **Editor:** Para el nombre del dibujante.
-  + **Canvas:** Permite al usuario dibujar y verel dibujo de otro usuario.
-  + **WSBBChannel:** Es el canal que realiza la comunicacion con el back y envia los dibujado por el 
-  usuario para poder verlo en el otro tablero.
-  + **WBAppController:** Es la clase que principal donde se corre la aplicacion y todas las demas dependencias.
-  + **BBEndpoint:** Clase encargada de recibir los mensajes y enviarlos para que sean dibujados.
-  + **BBConfiguration:** Clase que exporta datos. 
+  
   
  # Pruebas 
  
  Para pruebas utilizamos el despliegue en Heroku ingresando al siguiente link https://tablero-seguroarsw2021i.herokuapp.com/
+ 
+   Encontraremos un saludo y un link para ingresar
+ 
+   ![Imagen](https://github.com/camilaFetecua/TableroSeguro/blob/master/Imagenes/Prueba1.JPG)
+   
+   Al ingresar al link encontramos el login ,donde prondremos el usuario(user) y la contraseña(password) y damos clic en el boton de Sign In 
+   
+   ![Imagen](https://github.com/camilaFetecua/TableroSeguro/blob/master/Imagenes/Prueba2.JPG)
+   
+   Al ingresar encontramos el nombre del usuario y el espacio del tablero para iniciar con el dibujo. 
+   
+  ![Imagen](https://github.com/camilaFetecua/TableroSeguro/blob/master/Imagenes/Prueba6.JPG)
+  
+  Repetimos los pasos para el siguiente usuario , pero esta vez con el usuario(user2) y la contraseña(password2)
+  
+   ![Imagen](https://github.com/camilaFetecua/TableroSeguro/blob/master/Imagenes/Prueba3.JPG)
+   
+  Podemos observar que nos abre otro espacion con nuestro nombre y el tablero para hacer el dibujo 
+  
+  ![Imagen](https://github.com/camilaFetecua/TableroSeguro/blob/master/Imagenes/Prueba5.JPG)
+  
+  
+  
+   
+
+
+ 
+
   
  
  
