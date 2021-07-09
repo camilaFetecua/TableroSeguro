@@ -40,7 +40,24 @@
 
 ![Imagen](https://github.com/camilaFetecua/TableroSeguro/blob/master/Imagenes/Diagrama%20de%20clases.JPG)
 
-  Para este proyecto utilizamos:
+  Para este proyecto utilizamos 4 paquetes diferentes y una clase principal: 
+  
+   + Configurator
+      + BBConfigurator: Clase en la que exportamos datos
+      + WebMvcConfigurer: Clase en la cual se implementa el modelo vista controlador
+      + WebSecurityConfig: Clase en la que se implementa la seguridad de las paginas y definimos los usuarios   
+      
+   + EndPoints
+      + BBEndpoint: Clase encargada de recibir los mensajes y enviarlos para que sean dibujados.
+      
+   + Controllers
+      + DrawingServiceController: Clase que utilizamos controlamos el tablero , llamaos el puerto y el ticket. 
+      
+   + Repository:
+      + Memoria:Clase donde implementamos la memoria para el ticket y el numero de la memoria
+      
+   + BBAppStarter: Es la clase que principal donde se corre la aplicacion y todas las demas  dependencias.
+    
   
   
  # Pruebas 
