@@ -67,17 +67,10 @@
   
   ![Imagen](https://github.com/camilaFetecua/TableroSeguro/blob/master/Imagenes/Prueba5.JPG)
   
+  Y podemos observar que podemos ver el dibujo del otro usuario en la otra pantalla 
   
+   ![Imagen](https://github.com/camilaFetecua/TableroSeguro/blob/master/Imagenes/Prueba7.JPG)
   
-   
-
-
- 
-
-  
- 
- 
-
 
 # Tecnologias Utilizadas
 
@@ -90,7 +83,7 @@
 
 # Licencia
 
-  Para consultar la Licencia del proyecto haga [click aqui]()
+  Para consultar la Licencia del proyecto haga [click aqui](https://github.com/camilaFetecua/TableroSeguro/blob/master/LICENSE.md)
   
   
 # Autor 
